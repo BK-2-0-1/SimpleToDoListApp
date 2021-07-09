@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- шрифты! -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <title>Простой список дел</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1 class="title-weekday"><%= kindOfDay %> </h1>
+    </div>
+
+
+    <div class="box">
+
+        <% for( let index = 0; index < newListItems.length; index++ ) { %>
+
+        <div class="item">
+            <input type="checkbox" name="" id="">
+            <p><%= newListItems[index] %> </p>
+        </div>
+
+        <% } %>
+
+        <form action="/" method="post">
+            <input type="text" name="newItem" id="" placeholder="Добавить новую задачу" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+
+    </div>
+
+    <footer>
+        © 2021 BK-201
+    </footer>
+
+</body>
+
+</html>
